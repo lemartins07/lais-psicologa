@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-600: #4d77b3;
+  --color-brand-500: #6e97ce;
+  --color-brand-300: #87aede;
+  --color-bg-main: #eef5f7;
+  --color-bg-card: #ffffff;
+  --color-border: #d7e3ee;
+  --color-text-title: #0f172a;
+  --color-text-body: #1f2937;
+  --color-text-muted: #475569;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+    color: var(--color-text-body);
+    background-color: #f8fafc;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.8s ease forwards;
+  }
+
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
